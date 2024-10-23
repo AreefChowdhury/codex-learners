@@ -2,23 +2,38 @@
   "name": "codex-learners",
   "version": "1.0.0",
   "description": "Codex Learners Project",
-  "main": "src/index.js",
   "scripts": {
+    "install": "npm ci",
+    "lock:generate": "npm install",
+    "lock:check": "npm audit",
+    "lock:update": "npm update",
+    "preinstall": "npx npm-force-resolutions",
+    "postinstall": "npm audit fix",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint .",
-    "eject": "react-scripts eject",
-    "audit": "npm audit"
+    "eject": "react-scripts eject"
   },
   "dependencies": {
-    "react@": "^18.3.1",
-    "react-dom@": "^18.3.1",
-    "react-router-dom": "^6.27.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.3.0",
+    "@babel/core": "^7.15.8",
+    "browserslist": "^4.24.0",
+    "bootstrap": "^5.1.0"
   },
   "devDependencies": {
     "eslint": "^8.57.1",
-    "eslint-plugin-react": "^7.28.0"
+    "@eslint/eslintrc": "^2.1.4",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-webpack-plugin": "^3.2.0"
+  },
+  "resolutions": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "engines": {
+    "node": ">=14.x"
   },
   "license": "MIT"
 }
