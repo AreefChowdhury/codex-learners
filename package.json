@@ -15,12 +15,12 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.3.0",
+    "react": "^18.3.11",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^18.3.1",
     "@babel/core": "^7.15.8",
     "browserslist": "^4.24.0",
-    "bootstrap": "^5.1.0"
+    "bootstrap": "^5.2.0"
   },
   "devDependencies": {
     "eslint": "^8.57.1",
@@ -29,8 +29,8 @@
     "eslint-webpack-plugin": "^3.2.0"
   },
   "resolutions": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^18.3.11",
+    "react-dom": "^18.3.1"
   },
   "engines": {
     "node": ">=14.x"
