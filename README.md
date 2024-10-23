@@ -29,4 +29,4 @@ To set up and run the project locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/AreefChowdhury/codex-studio.git
+   git clone https://github.com/AreefChowdhury/codex-learners.git
