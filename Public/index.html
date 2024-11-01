@@ -1,43 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex Creator's Club</title>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <react-scripts>You need to enable JavaScript to run this app.</react-scripts>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <!-- Navbar Section -->
+    <header class="navbar-area">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Codex Creator's Club Logo" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing Plans</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center text-white" id="hero" style="background-image: url('images/hero-bg.jpg'); background-size: cover; height: 80vh;">
+        <div class="container d-flex align-items-center justify-content-center flex-column h-100">
+            <h1>Welcome to Codex Creator's Club</h1>
+            <p class="lead">Transforming ideas into reality with AI, software development, and digital marketing.</p>
+            <a href="#services" class="btn btn-primary m-2">Learn More</a>
+            <a href="#contact" class="btn btn-secondary m-2">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services py-5" id="services">
+        <div class="container text-center">
+            <h2 class="mb-4">Our Key Services</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-box">
+                        <img src="images/ai.png" alt="AI Service" class="img-fluid mb-3">
+                        <h3>Artificial Intelligence</h3>
+                        <p>Advanced AI tutorials and resources.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-box">
+                        <img src="images/software.png" alt="Software Development" class="img-fluid mb-3">
+                        <h3>Software Development</h3>
+                        <p>Expert guides for developers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-box">
+                        <img src="images/web.png" alt="Web Development" class="img-fluid mb-3">
+                        <h3>Web Development</h3>
+                        <p>Comprehensive website tutorials.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-box">
+                        <img src="images/marketing.png" alt="Digital Marketing" class="img-fluid mb-3">
+                        <h3>Digital Marketing</h3>
+                        <p>Strategies for a digital presence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Posts -->
+    <section class="blog py-5 bg-light" id="blog">
+        <div class="container text-center">
+            <h2 class="mb-4">Latest Blog Posts</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-post">
+                        <img src="images/blog1.jpg" class="img-fluid mb-3" alt="Blog 1">
+                        <h3>Industry Trends in AI</h3>
+                        <p>Exploring the latest trends in artificial intelligence.</p>
+                        <a href="#" class="btn btn-link">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-post">
+                        <img src="images/blog2.jpg" class="img-fluid mb-3" alt="Blog 2">
+                        <h3>Digital Marketing Insights</h3>
+                        <p>Top strategies for online marketing success.</p>
+                        <a href="#" class="btn btn-link">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-post">
+                        <img src="images/blog3.jpg" class="img-fluid mb-3" alt="Blog 3">
+                        <h3>Web Development Basics</h3>
+                        <p>A beginner’s guide to building responsive websites.</p>
+                        <a href="#" class="btn btn-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials py-5" id="testimonials">
+        <div class="container text-center">
+            <h2 class="mb-4">What Our Members Say</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial">
+                        <img src="images/client1.jpg" alt="Client 1" class="rounded-circle mb-3" style="width: 80px;">
+                        <p>"Codex Creator's Club transformed my career!"</p>
+                        <h5>- Jane Doe</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial">
+                        <img src="images/client2.jpg" alt="Client 2" class="rounded-circle mb-3" style="width: 80px;">
+                        <p>"Amazing resources for developers."</p>
+                        <h5>- John Smith</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial">
+                        <img src="images/client3.jpg" alt="Client 3" class="rounded-circle mb-3" style="width: 80px;">
+                        <p>"Invaluable community and support."</p>
+                        <h5>- Sarah Lee</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer bg-dark text-white py-4" id="contact">
+        <div class="container text-center">
+            <p>&copy; 2024 Codex Creator's Club. All rights reserved.</p>
+            <p>Follow us on: 
+                <a href="#" class="text-white">Twitter</a> | 
+                <a href="#" class="text-white">Instagram</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="index.js"></script>
+</body>
 </html>
