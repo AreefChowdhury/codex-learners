@@ -1,36 +1,77 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  // Import Link from React Router
 
-function Navbar() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Codex Studio</Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/courses">Courses</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/blog">Blog</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about-us">About Us</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/services">Services</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  );
-}
+document.addEventListener("DOMContentLoaded", function () {
+    // Define the navigation items
+    const navItems = [
+        { name: "Home", href: "index.html#hero" },
+        { name: "About Us", href: "about.html" },
+        { name: "Services", href: "services.html" },
+        { name: "Portfolio", href: "portfolio.html" },
+        { name: "Blog", href: "blog.html" },
+        { name: "Pricing Plans", href: "pricing.html" },
+        { name: "Contact Us", href: "contact.html" },
+        { name: "FAQ", href: "faq.html" },
+        { name: "Testimonials", href: "testimonials.html" },
+        { name: "Terms and Conditions", href: "terms.html" },
+        { name: "Careers", href: "careers.html" }
+    ];
 
-export default Navbar;
+    // Create the navbar container
+    const navbar = document.createElement("nav");
+    navbar.className = "navbar navbar-expand-lg navbar-dark bg-dark";
+
+    // Create the container div for navbar items
+    const containerDiv = document.createElement("div");
+    containerDiv.className = "container";
+
+    // Add brand/logo to the navbar
+    const brand = document.createElement("a");
+    brand.className = "navbar-brand";
+    brand.href = "index.html";
+    brand.innerHTML = `<img src="images/logo.png" alt="Codex Creator's Club Logo" class="logo">`;
+    containerDiv.appendChild(brand);
+
+    // Navbar toggler for mobile
+    const toggler = document.createElement("button");
+    toggler.className = "navbar-toggler";
+    toggler.type = "button";
+    toggler.dataset.toggle = "collapse";
+    toggler.dataset.target = "#navbarNav";
+    toggler.setAttribute("aria-controls", "navbarNav");
+    toggler.setAttribute("aria-expanded", "false");
+    toggler.setAttribute("aria-label", "Toggle navigation");
+    toggler.innerHTML = `<span class="navbar-toggler-icon"></span>`;
+    containerDiv.appendChild(toggler);
+
+    // Create the collapsible navbar menu
+    const collapseDiv = document.createElement("div");
+    collapseDiv.className = "collapse navbar-collapse";
+    collapseDiv.id = "navbarNav";
+
+    // Create the unordered list to hold nav links
+    const ul = document.createElement("ul");
+    ul.className = "navbar-nav ml-auto";
+
+    // Generate the nav items
+    navItems.forEach(item => {
+        const li = document.createElement("li");
+        li.className = "nav-item";
+        
+        const a = document.createElement("a");
+        a.className = "nav-link";
+        a.href = item.href;
+        a.textContent = item.name;
+
+        li.appendChild(a);
+        ul.appendChild(li);
+    });
+
+    // Append the list to the collapsible div
+    collapseDiv.appendChild(ul);
+    containerDiv.appendChild(collapseDiv);
+
+    // Append the complete navbar to the body or a specific container
+    navbar.appendChild(containerDiv);
+    document.body.insertBefore(navbar, document.body.firstChild);
+});
